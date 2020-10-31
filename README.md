@@ -9,7 +9,7 @@
 
 - 📫 How to reach me **atinbainada1710@gmail.com**
 
-- 📄 Know about my experiences **[Resume]**(https://leoab10.github.io/resume.pdf)
+- 📄 Know about my experiences **[Resume](https://leoab10.github.io/resume.pdf)**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
