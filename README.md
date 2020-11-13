@@ -9,7 +9,7 @@
 
 - 📫 Reach me: **atinbainada1710@gmail.com**
 
-- 📄 My **[Resume](https://leoab10.github.io/resume.pdf)**
+- 📄 My **[Resume](https://at-in.github.io/resume.pdf)**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
