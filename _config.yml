@@ -6,21 +6,21 @@ url:                 ""
 
 # Navigation links
 nav-links:
-  - title: Home
-  - href:  /
-  - title: Projects
-  - href:  /projects/
-  - title: Resume
-    subcategories:
-    - title: 1 page
-    - href: /resume/1pg.pdf/
-    - title: 2 page
-    - href: /resume/2pg.pdf/
-  - title: About me
-  - href:  /aboutme/
+  - title:           Home
+    href:            /
+  - title:           Projects
+    href:            /projects/
+  - title:           Resume
+    sublinks:
+    - title:         1 page
+      href:          /resume/1pg.pdf/
+    - title:         2 page
+      href:          /resume/2pg.pdf/
+  - title:           About me
+    href:            /aboutme/
 
 # Social Links
-social:
+social-links:
   github:            atin
   linkedin:          atin
 
@@ -29,6 +29,9 @@ author:
   url:               atin.github.io
   email:             atinbainada@iitb.ac.in
 
+# Custom vars
+avatar:              "/img/avatar.png"
+avatar_with_mask:    "/img/avatar_with_mask.png"
 version: 0.0.1
 
 plugins:
