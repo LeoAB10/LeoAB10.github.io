@@ -1,0 +1,9 @@
+Jekyll thems I kinda used:
+  Chirpy - https://chirpy.cotes.info/
+  Lanyon - 
+  Klise - https://klise.now.sh/
+
+Footer always at bottom - https://codepen.io/cbracco/pen/zekgx
+
+Unused cool things:
+Star Wars Opening Closing - https://codepen.io/rss/pen/vIDKH/
