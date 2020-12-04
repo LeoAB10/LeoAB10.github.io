@@ -14,7 +14,7 @@
         <div class="container">
           <h3 class="masthead-title">
             <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
+            <small> &middot; {{ site.tagline }}</small>
           </h3>
         </div>
       </div>
@@ -25,6 +25,8 @@
     </div>
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    {% include footer.html %}
 
     <script src='{{ site.baseurl }}/js/script.js'></script>
   </body>

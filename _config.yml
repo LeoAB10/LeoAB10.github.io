@@ -12,10 +12,12 @@ nav-links:
     href:            /projects/
   - title:           Resume
     sublinks:
-    - title:         1 page
+    - title:         Short resume
       href:          /resume/1pg.pdf/
-    - title:         2 page
+    - title:         Long resume
       href:          /resume/2pg.pdf/
+    - title:         Very long resume
+      href:          /resume/
   - title:           About me
     href:            /aboutme/
 
@@ -30,8 +32,9 @@ author:
   email:             atinbainada@iitb.ac.in
 
 # Custom vars
-avatar:              "/img/avatar.png"
-avatar_with_mask:    "/img/avatar_with_mask.png"
+avatar:
+  normal:            "/img/avatar.png"
+  with_mask:         "/img/avatar_with_mask.png"
 version: 0.0.1
 
 plugins:
