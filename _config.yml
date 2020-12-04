@@ -4,6 +4,15 @@ description:         Desc
 baseurl:             ""
 url:                 ""
 
+links:
+  home:              /
+  projects:          /projects/
+  resume:            /resume/
+  cv-short:          /resume/1pg/
+  cv-long:           /resume/2pg/
+  about:             /about/
+  
+
 # Navigation links
 nav-links:
   - title:           Home
@@ -11,15 +20,16 @@ nav-links:
   - title:           Projects
     href:            /projects/
   - title:           Resume
+    href:            /resume/
     sublinks:
-    - title:         Short resume
+    - title:         1 page
       href:          /resume/1pg.pdf/
-    - title:         Long resume
+    - title:         2 page
       href:          /resume/2pg.pdf/
-    - title:         Very long resume
-      href:          /resume/
   - title:           About me
-    href:            /aboutme/
+    href:            /about/
+
+
 
 # Social Links
 social-links:

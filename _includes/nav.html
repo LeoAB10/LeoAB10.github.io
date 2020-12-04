@@ -5,7 +5,7 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <header class="avatar">
-    <a href="{{ '/aboutme/' | relative_url }}"><img src="{{ site.avatar.normal | relative_url }}" /></a>
+    <a href="{{ site.links.about | relative_url }}"><img src="{{ site.avatar.normal | relative_url }}" /></a>
     <h4>nobody</h4>
   </header>
   <nav class="sidebar-nav">
@@ -13,7 +13,7 @@
       {% for link in site.nav-links %}
         {% if link.sublinks %}
           <li>
-            <a class="sidebar-nav-item" href="#"><i class="ion-ios-more"></i> <span class="">{{ link.title }}</span></a>
+            <a class="sidebar-nav-item" href="{{ link.href }}"><i class="ion-ios-more"></i> <span class="">{{ link.title }}</span></a>
             <ul class="nav-flyout">
               {% for sublink in link.sublinks %}
                 <li>
