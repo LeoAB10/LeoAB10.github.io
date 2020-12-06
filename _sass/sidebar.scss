@@ -3,7 +3,7 @@
   top: 0;
   bottom: 0;
   left: -14rem;
-  width: 14rem;
+  width: 12rem;
   visibility: hidden;
   overflow-y: auto;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
@@ -44,22 +44,32 @@
     display: block;
     padding: 0;
     margin: 0;
-    li {
+    .nav-item {
       margin-left: 0;
       padding-left: 0;
       display: inline-block;
       width: 100%;
-      a {
+      height: 3rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      .nav-link {
         color: rgba(255, 255, 255, 0.9);
         font-size: 0.75em;
         padding: 0.4em 0.5em;
         position: relative;
         display: block;
+        text-decoration: none;
         &:hover {
           background-color: rgba(0, 0, 0, 0.9);
           -webkit-transition: all 0s ease;
           -moz-transition: all 0s ease;
           transition: all 0s ease;
+        }
+      }
+      &.active {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: transparent;
+        .nav-link{
+          color: red;
         }
       }
       i {
@@ -71,36 +81,13 @@
       }
     }
   }
-  > ul > li > a:after {
-    content: "\f125";
-    font-family: ionicons;
-    font-size: 0.5em;
-    width: 10px;
-    color: #fff;
-    position: absolute;
-    right: 0.75em;
-    top: 45%;
-  }
 }
-
-.nav-item {
-  display: block;
-  padding: 0.5rem 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.nav-item.active, a.nav-item:hover, a.nav-item:focus {
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: transparent;
-}
-
-@media (min-width: 48em) {
-  .nav-item {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
+// .nav-item.active, a.nav-linkS:hover, a.nav-link:focus {
+//   color: red;
+//   text-decoration: none;
+//   background-color: rgba(255, 255, 255, 0.1);
+//   border-color: transparent;
+// }
 
 /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
 .sidebar-checkbox {
