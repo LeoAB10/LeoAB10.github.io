@@ -6,22 +6,15 @@
      <div class="sidebar" id="sidebar">
        <header class="avatar">
          <a href="{{ site.links.about | relative_url }}"><img src="{{ site.avatar.normal | relative_url }}" /></a>
-         <h4>nobody</h4>
+         <!-- <h4>nobody</h4> -->
        </header>
        <nav class="sidebar-nav">
          <ul>
            {% for link in site.nav-links %}
-               <li class="nav-item d-flex justify-content-center {% if page.url == link.href %}active{% endif %}">
-                 <a class="nav-link d-flex justify-content-center align-items-center w-100" href="{{ link.href | relative_url }}"></> <span>{{ link.title | upcase }}</span></a>
+               <li class="nav-item {% if page.url == link.href %}active{% endif %}">
+                 <a class="nav-link" href="{{ link.href | relative_url }}"></> <span>{{ link.title | upcase }}</span></a>
                </li>
            {% endfor %}
          </ul>
-         <!-- <span class="nav-item"><a href="{{ site.anon-form }}" target="_blank">Anonymously message</a></span>
-         <span class="nav-item">Currently <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">v3.141</a></span> -->
-         <div class="nav-item d-flex justify-content-center align-items-center w-100">
-           <p>
-             &#127279; {{ site.time | date: '%Y' }}. All lefts reversed.
-           </p>
-         </div>
        </nav>
      </div>
