@@ -1,5 +1,13 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html, body {
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -171,13 +179,6 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 }
-
-/*
- * Pagination
- *
- * Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
- * there are no more previous or next posts to show.
- */
 
 .pagination {
   overflow: hidden; /* clearfix */
