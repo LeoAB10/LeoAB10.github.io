@@ -11,30 +11,36 @@ links:
   cv-short:          /resume/1pg/
   cv-long:           /resume/2pg/
   about:             /about/
-  
+
 
 # Navigation links
 nav-links:
   - title:           Home
-    href:            /
+    url:            /
   - title:           Projects
-    href:            /projects/
+    url:            /projects/
   - title:           Resume
-    href:            /resume/
+    url:            /resume/
     sublinks:
     - title:         1 page
-      href:          /resume/1pg.pdf/
+      url:          /resume/1pg.pdf/
     - title:         2 page
-      href:          /resume/2pg.pdf/
+      url:          /resume/2pg.pdf/
   - title:           About me
-    href:            /about/
+    url:            /about/
 
 
 
 # Social Links
 social-links:
-  github:            atin
-  linkedin:          atin
+  - url:            http://github.com/atin
+    icon:           /img/GitHub/PNG/GitHub-Mark-32px.png
+  - url:            http://linkedin.com/in/atin
+    icon:           /img/GitHub/PNG/GitHub-Mark-32px.png
+  - url:            https://stackoverflow.com/users/12011589/at-in
+    icon:           /img/icons/stackoverflow.svg
+  - url:            https://www.kaggle.com/atin10
+    icon:           /img/icons/mathexchange.png
 
 author:
   name:              Atin Bainada
@@ -43,8 +49,8 @@ author:
 
 # Custom vars
 avatar:
-  normal:            "/img/avatar.png"
-  with_mask:         "/img/avatar_with_mask.png"
+  normal:            /img/avatar.png
+  with_mask:         /img/avatar_with_mask.png
 version: 0.0.1
 
 plugins:

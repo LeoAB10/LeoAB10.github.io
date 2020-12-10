@@ -1,10 +1,9 @@
 <footer class="container">
   <hr />
   <div class="social-links">
-    <a href="https://github.com/atin"></a>
-    <a href="https://github.com/atin"></a>
-    <a href="https://github.com/atin"></a>
-    <a href="https://github.com/atin"></a>
+    {% for link in site.social-links %}
+    <a href="{{ link.url | relative_url }}"><img src="{{ link.icon | relative_url }}" width="24px" height="24px"></a>
+    {% endfor %}
   </div>
   <div class="nav-links"></div>
 </footer>
