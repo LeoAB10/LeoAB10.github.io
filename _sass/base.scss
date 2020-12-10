@@ -102,12 +102,12 @@ h1, h2, h3, h4, h5, h6 {
  * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
  */
 
-.wrap, .sidebar, .sidebar-toggle {
+.wrap, .sidebar, .sidebar-toggle, footer {
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.wrap,  .sidebar-toggle {
+.wrap, .sidebar-toggle, footer {
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
 }
@@ -118,7 +118,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 #sidebar-checkbox:checked ~ .sidebar,
 #sidebar-checkbox:checked ~ .wrap,
-#sidebar-checkbox:checked ~ .sidebar-toggle {
+#sidebar-checkbox:checked ~ .sidebar-toggle,
+#sidebar-checkbox:checked ~ footer {
   -webkit-transform: translateX(14rem);
   -ms-transform: translateX(14rem);
   transform: translateX(14rem);
