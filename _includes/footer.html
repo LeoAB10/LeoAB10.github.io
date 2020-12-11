@@ -5,5 +5,9 @@
     <a href="{{ link.url | relative_url }}"><img src="{{ link.icon | relative_url }}" width="24px" height="24px"></a>
     {% endfor %}
   </div>
-  <div class="nav-links"></div>
+  <div class="nav-links">
+    {% for link in site.nav-links %}
+    <a href="{{ link.url | relative_url }}"><span>{{ link.title | upcase }}</span></a>
+    {% endfor %}
+  </div>
 </footer>

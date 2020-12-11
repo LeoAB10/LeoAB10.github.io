@@ -4,14 +4,15 @@ footer {
   left: 0;
   right: 0;
   text-align: center;
-  // width: 50%;
   hr {
     border: 0;
     border-top: 1px solid #ccc;
   }
-  .social-links {
-    i {
-      color: black;
+  .nav-links a {
+    color: #444;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

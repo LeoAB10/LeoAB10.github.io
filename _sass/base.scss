@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-  max-width: 45rem;
+  max-width: 50rem;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-left: auto;
@@ -50,18 +50,21 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 .masthead {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-bottom: 3rem;
+  padding: .7rem 0;
+  margin-bottom: 2rem;
   border-bottom: 1px solid #eee;
 }
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
   color: #505050;
-  font-size: 24px;
+  font-size: 30px;
   a {
     color: #505050;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
