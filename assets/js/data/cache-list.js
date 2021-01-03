@@ -31,7 +31,7 @@ const include = [
   /*--- HTML ---*/
 
   /* Tabs */
-  {% for tab in site.tabs %}
+  {% for tab in site.blog %}
     '{{ tab.url }}',
   {% endfor %}
 

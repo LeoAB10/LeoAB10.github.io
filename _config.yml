@@ -119,7 +119,7 @@ kramdown:
 permalink: /posts/:title/
 
 collections:
-  tabs:
+  blog:
     output: true
     sort_by: order
 
@@ -159,7 +159,7 @@ defaults:
           url: /
         -
           label: Tags
-          url: /tabs/tags/
+          url: /blog/tags/
   -
     scope:
       path: categories
@@ -170,11 +170,11 @@ defaults:
           url: /
         -
           label: Categories
-          url: /tabs/categories/
+          url: /blog/categories/
   -
     scope:
       path: ''
-      type: tabs             # see `site.collections`
+      type: blog             # see `site.collections`
     values:
       layout: page
       dynamic_title: true    # Hide title in mobile screens.
