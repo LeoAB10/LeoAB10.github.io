@@ -13,9 +13,12 @@ html, body {
 html {
   height: 100%;
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-size-adjust: 100%;
 }
 
 body {
+  color: #4d5156;
+  font-size: 20px;
   position: relative;
   margin: 0;
   padding-bottom: 6rem;
@@ -36,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-  max-width: 50rem;
+  max-width: 45rem;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-left: auto;

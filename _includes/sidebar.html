@@ -12,7 +12,7 @@
          <ul>
            {% for link in site.nav-links %}
                <li class="nav-item {% if page.url == link.url %}active{% endif %}">
-                 <a class="nav-link" href="{{ link.url | relative_url }}"></> <span>{{ link.title | upcase }}</span></a>
+                 <a class="nav-link" href="{{ link.url | relative_url }}"> <span>{{ link.title | upcase }}</span></a>
                </li>
            {% endfor %}
          </ul>

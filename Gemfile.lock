@@ -1,6 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (6.0.3.4)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+      zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     backports (3.18.2)
@@ -18,6 +24,10 @@ GEM
     ffi (1.13.1-x64-mingw32)
     ffi (1.13.1-x86-mingw32)
     forwardable-extended (2.6.0)
+    gemoji (3.0.1)
+    html-pipeline (2.14.0)
+      activesupport (>= 2)
+      nokogiri (>= 1.4)
     http_parser.rb (0.6.0)
     http_parser.rb (0.6.0-java)
     i18n (1.8.5)
@@ -49,6 +59,10 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    jemoji (0.12.0)
+      gemoji (~> 3.0)
+      html-pipeline (~> 2.2)
+      jekyll (>= 3.0, < 5.0)
     kramdown (2.3.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -58,14 +72,27 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
+    mini_portile2 (2.5.0)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
+    minitest (5.14.2)
     multi_json (1.15.0)
+    nokogiri (1.11.0)
+      mini_portile2 (~> 2.5.0)
+      racc (~> 1.4)
+    nokogiri (1.11.0-java)
+      racc (~> 1.4)
+    nokogiri (1.11.0-x64-mingw32)
+      racc (~> 1.4)
+    nokogiri (1.11.0-x86-mingw32)
+      racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
+    racc (1.5.2)
+    racc (1.5.2-java)
     rack (1.6.13)
     rack-protection (1.5.5)
       rack
@@ -103,6 +130,7 @@ GEM
       tzinfo (>= 1.0.0)
     unicode-display_width (1.7.0)
     wdm (0.1.1)
+    zeitwerk (2.4.2)
 
 PLATFORMS
   java
@@ -116,6 +144,7 @@ DEPENDENCIES
   jekyll-admin (~> 0.10.2)
   jekyll-feed (~> 0.12)
   jekyll-seo-tag
+  jemoji
   minima (~> 2.5)
   tzinfo (~> 1.2)
   tzinfo-data

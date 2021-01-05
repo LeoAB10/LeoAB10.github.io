@@ -6,9 +6,11 @@
 
   <title>
     {% if page.title == "Home" %}
-      {{ site.title }} | {{ site.tagline }}
+      {{ site.title }}
+    {% elsif page.title == "Who am I?" %}
+      {{ page.title }}
     {% else %}
-      {{ page.title }} | {{ site.title }}
+      {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
 

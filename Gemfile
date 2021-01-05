@@ -31,4 +31,6 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # SEO tag
 gem 'jekyll-seo-tag'
 
+gem 'jemoji'
+
 gem "jekyll-admin", "~> 0.10.2"

@@ -1,5 +1,4 @@
 title:               Atin Bainada
-tagline:             A nobody
 description:         Desc
 baseurl:             ""
 url:                 ""
@@ -16,31 +15,33 @@ links:
 # Navigation links
 nav-links:
   - title:           Home
-    url:            /
+    url:             /
   - title:           Projects
-    url:            /projects/
+    url:             /projects/
+  - title:           Notes
+    url:             /notes/
   - title:           Resume
-    url:            /resume/
+    url:             /resume/
     sublinks:
     - title:         1 page
-      url:          /resume/1pg.pdf/
+      url:           /resume/1pg.pdf/
     - title:         2 page
-      url:          /resume/2pg.pdf/
+      url:           /resume/2pg.pdf/
   - title:           About me
-    url:            /about/
+    url:             /about/
 
 
 
 # Social Links
 social-links:
-  - url:            http://github.com/atin
-    icon:           /img/GitHub/PNG/GitHub-Mark-32px.png
-  - url:            http://linkedin.com/in/atin
-    icon:           /img/GitHub/PNG/GitHub-Mark-32px.png
-  - url:            https://stackoverflow.com/users/12011589/at-in
-    icon:           /img/icons/stackoverflow.svg
-  - url:            https://www.kaggle.com/atin10
-    icon:           /img/icons/mathexchange.png
+  - url:             http://github.com/atin
+    icon:            /img/GitHub/PNG/GitHub-Mark-32px.png
+  - url:             http://linkedin.com/in/atin
+    icon:            /img/GitHub/PNG/GitHub-Mark-32px.png
+  - url:             https://stackoverflow.com/users/12011589/at-in
+    icon:            /img/icons/stackoverflow.svg
+  - url:             https://www.kaggle.com/atin10
+    icon:            /img/icons/mathexchange.png
 
 author:
   name:              Atin Bainada
@@ -56,7 +57,7 @@ version: 0.0.1
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
+  - jemoji
 # Dependencies
 # markdown:            kramdown
 # highlighter:         rogue
