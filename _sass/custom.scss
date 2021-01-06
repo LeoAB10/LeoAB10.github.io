@@ -10,6 +10,17 @@ img.emoji {
 }
 
 a {
-  text-decoration: none;
+  display: inline-flex;
   color: #0077cc;
+  text-decoration: none;
+}
+
+.cus-li {
+  list-style-type: none;
+  .earth {
+    display: inline-flex;
+    font-size: 7px;
+    margin: -2px 7px auto -20px;
+    vertical-align: middle;
+  }
 }

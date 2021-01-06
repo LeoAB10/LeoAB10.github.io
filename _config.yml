@@ -2,16 +2,8 @@ title:               Atin Bainada
 description:         Desc
 baseurl:             ""
 url:                 ""
-
-links:
-  home:              /
-  projects:          /projects/
-  resume:            /resume/
-  cv-short:          /resume/1pg/
-  cv-long:           /resume/2pg/
-  about:             /about/
-
-
+me:                  /about/
+anon-form:           https://forms.gle/oj5BvZftnLP5qgBy5
 # Navigation links
 nav-links:
   - title:           Home
@@ -38,7 +30,7 @@ social-links:
     icon:            /img/GitHub/PNG/GitHub-Mark-32px.png
   - url:             http://linkedin.com/in/atin
     icon:            /img/GitHub/PNG/GitHub-Mark-32px.png
-  - url:             https://stackoverflow.com/users/12011589/at-in
+  - url:             https://stackoverflow.com/users/12011589/atin
     icon:            /img/icons/stackoverflow.svg
   - url:             https://www.kaggle.com/atin10
     icon:            /img/icons/mathexchange.png
