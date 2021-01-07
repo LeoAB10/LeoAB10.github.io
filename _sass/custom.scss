@@ -13,6 +13,9 @@ a {
   display: inline-flex;
   color: #0077cc;
   text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .cus-li {
