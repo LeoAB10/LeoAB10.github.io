@@ -46,6 +46,14 @@ avatar:
   with_mask:         /img/avatar_with_mask.png
 version: 0.0.1
 
+collections:
+  notes:
+    output:          true
+  blog:
+    output:          true
+  projects:
+    output:          true
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
