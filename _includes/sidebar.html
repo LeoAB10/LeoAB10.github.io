@@ -1,20 +1,22 @@
 <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
-     <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
 
-     <!-- Toggleable sidebar -->
-     <div class="sidebar" id="sidebar">
-       <header class="avatar">
-         <a href="{{ site.me | relative_url }}"><img src="{{ site.avatar.normal | relative_url }}" /></a>
-         <!-- <h4>nobody</h4> -->
-       </header>
-       <nav class="sidebar-nav">
-         <ul>
-           {% for link in site.nav-links %}
-               <li class="nav-item {% if page.url == link.url %}active{% endif %}">
-                 <a class="nav-link" href="{{ link.url | relative_url }}"> <span>{{ link.title | upcase }}</span></a>
-               </li>
-           {% endfor %}
-         </ul>
-       </nav>
-     </div>
+<div class="sidebar" id="sidebar">
+  <header class="avatar">
+    <a href="{{ site.me | relative_url }}">
+      <img src="{{ site.avatar.normal | relative_url }}"/>
+    </a>
+  </header>
+  <nav class="sidebar-nav">
+    <ul>
+      {% for link in site.nav-links %}
+      <li class="nav-item {% if page.url == link.url %}active{% endif %}">
+        <a class="nav-link" href="{{ link.url | relative_url }}">
+          <span>{{ link.title | upcase }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

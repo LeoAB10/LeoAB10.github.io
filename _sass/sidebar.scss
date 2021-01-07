@@ -95,20 +95,10 @@
   position: absolute;
   top: 0.8rem;
   left: 1rem;
-  display: flex;
   align-items: center;
   padding: 0.25rem 0.75rem;
-  color: #505050;
-  background-color: #fff;
-  border-radius: 0.25rem;
+  color: #999;
   cursor: pointer;
-}
-
-.sidebar-toggle:active,
-#sidebar-checkbox:focus ~ .sidebar-toggle,
-#sidebar-checkbox:checked ~ .sidebar-toggle {
-  color: #fff;
-  background-color: #555;
 }
 
 .sidebar-toggle:active:before,
