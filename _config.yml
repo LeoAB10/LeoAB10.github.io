@@ -60,3 +60,5 @@ plugins:
 #   - jekyll-paginate
 # gems:
 #     - jekyll-redirect-from
+
+theme: jekyll-theme-midnight
