@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CS224.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h2 id="logistics">Logistics</h2>
+<h4 id="credit-structure">Credit Structure</h4>
+<ul>
+<li>End Sem Exam: 40%</li>
+<li>Mid Sem Exam: 20%</li>
+<li>Quizzes: 10%</li>
+<li>Assignments: 25%</li>
+</ul>
+<h4 id="interaction-details">Interaction Details</h4>
+<ul>
+<li>MS Teams for live interaction</li>
+<li>Moodle for announcements</li>
+<li>Safe app for quizzes</li>
+<li>Google Drive for recorded lectures</li>
+</ul>
+<h2 id="a-lil-terminology">A li'l Terminology</h2>
+<table>
+<thead>
+<tr>
+<th>Terms</th>
+<th style="text-align:left">Their meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Computer Network</td>
+<td style="text-align:left">Infrastructure / framework that permits computers to exchange information</td>
+</tr>
+<tr>
+<td>Hosts / End Systems</td>
+<td style="text-align:left">A computer or other device connected to a computer network</td>
+</tr>
+<tr>
+<td>Server</td>
+<td style="text-align:left">A computer hardware or software that provides functionalities for other programs or devices called &quot;clients&quot;</td>
+</tr>
+<tr>
+<td>Process</td>
+<td style="text-align:left">A running program in a host computer</td>
+</tr>
+<tr>
+<td>Network Adaptor</td>
+<td style="text-align:left">Hardware that connect a device to a computer network and enable it to exchange data with other devices on the network</td>
+</tr>
+<tr>
+<td>Communication Links</td>
+<td style="text-align:left">Physical medium (eg. Co-axial cable, fiber-optics) that interconnects two or more computers for the purpose of data transmission</td>
+</tr>
+<tr>
+<td>Routers / Switches / Gateways</td>
+<td style="text-align:left">Interconnect multiple Computer Networks. All 3 are different in some ways</td>
+</tr>
+<tr>
+<td>Node</td>
+<td style="text-align:left">Any device attached to a network (eg. Hosts, Router etc)</td>
+</tr>
+<tr>
+<td>Internet</td>
+<td style="text-align:left">Global system of interconnected computer networks</td>
+</tr>
+<tr>
+<td>Internet Service Provider (ISP)</td>
+<td style="text-align:left">Organization that provides access to internet</td>
+</tr>
+<tr>
+<td>Protocol</td>
+<td style="text-align:left">Set of rules for exchanging data over a network</td>
+</tr>
+<tr>
+<td>Packet</td>
+<td style="text-align:left">A unit of data consisting of user data (also called <em>payload</em>) and Control info</td>
+</tr>
+<tr>
+<td>Network address</td>
+<td style="text-align:left">An identifier for a node or host a network (eg. IP address, MAC address)</td>
+</tr>
+<tr>
+<td>Performance Metrics</td>
+<td style="text-align:left">Measures performance of a protocol</td>
+</tr>
+<tr>
+<td>Bandwidth</td>
+<td style="text-align:left">Maximum rate of data transfer</td>
+</tr>
+<tr>
+<td>Throughput</td>
+<td style="text-align:left">Actual rate of data transfer (can be different from bandwidth)</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td style="text-align:left">Time taken in transferring data from source to destination</td>
+</tr>
+<tr>
+<td>Packet loss</td>
+<td style="text-align:left">Percentage of packets which failed to reach their destination w.r.t. packets sent</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-osi-model">The OSI Model</h2>
+<p>The <strong>Open Systems Interconnection</strong> (OSI) model is a conceptual model, created by the International Organization for Standardization. It characterize the communication functions of a computer system irrespective of the system's underlying internal structure and technology.</p>
+<p>TL;DR - The OSI model provides a standard for different computer systems to communicate using standard protocols.</p>
+<h3 id="7-layers-of-the-osi-model">7 Layers of the OSI Model</h3>
+<p>The following table from this <a href="https://en.wikipedia.org/wiki/OSI_model">wikipedia article</a> summarizes the functions of each layer.</p>
+<table class="wikitable" style="margin: 1em auto 1em auto;">
+<caption>OSI model
+</caption>
+<tbody><tr>
+<th colspan="3">Layer
+</th>
+<th><a href="https://en.wikipedia.org/wiki/Protocol_data_unit" title="Protocol data unit">Protocol data unit</a> (PDU)
+</th>
+<th>Function
+</th></tr>
+<tr>
+<th rowspan="4">Host<br>layers
+</th>
+<td style="background:#d8ec9b;">7
+</td>
+<td style="background:#d8ec9b;"><a href="https://en.wikipedia.org/wiki/Application_layer" title="Application layer">Application</a>
+</td>
+<td style="background:#d8ec9c;" rowspan="3"><a href="https://en.wikipedia.org/wiki/Data_(computing)" title="Data (computing)">Data</a>
+</td>
+<td style="background:#d8ec9c;">High-level <a href="https://en.wikipedia.org/wiki/API" title="API">APIs</a>, including resource sharing, remote file access
+</td></tr>
+<tr>
+<td style="background:#d8ec9b;">6
+</td>
+<td style="background:#d8ec9b;"><a href="https://en.wikipedia.org/wiki/Presentation_layer" title="Presentation layer">Presentation</a>
+</td>
+<td style="background:#d8ec9b;">Translation of data between a networking service and an application; including <a href="https://en.wikipedia.org/wiki/Character_encoding" title="Character encoding">character encoding</a>, <a href="https://en.wikipedia.org/wiki/Data_compression" title="Data compression">data compression</a> and <a href="https://en.wikipedia.org/wiki/Encryption" title="Encryption">encryption/decryption</a>
+</td></tr>
+<tr>
+<td style="background:#d8ec9b;">5
+</td>
+<td style="background:#d8ec9b;"><a href="https://en.wikipedia.org/wiki/Session_layer" title="Session layer">Session</a>
+</td>
+<td style="background:#d8ec9b;">Managing communication <a href="https://en.wikipedia.org/wiki/Session_(computer_science)" title="Session (computer science)">sessions</a>, i.e., continuous exchange of information in the form of multiple back-and-forth transmissions between two nodes
+</td></tr>
+<tr>
+<td style="background:#e7ed9c;">4
+</td>
+<td style="background:#e7ed9c;"><a href="https://en.wikipedia.org/wiki/Transport_layer" title="Transport layer">Transport</a>
+</td>
+<td style="background:#e7ed9c;"><a href="https://en.wikipedia.org/wiki/Packet_segmentation" title="Packet segmentation">Segment</a>, <a href="https://en.wikipedia.org/wiki/Datagram" title="Datagram">Datagram</a>
+</td>
+<td style="background:#e7ed9c;">Reliable transmission of data segments between points on a network, including <a href="https://en.wikipedia.org/wiki/Packet_segmentation" title="Packet segmentation">segmentation</a>, <a href="https://en.wikipedia.org/wiki/Acknowledgement_(data_networks)" title="Acknowledgement (data networks)">acknowledgement</a> and <a href="https://en.wikipedia.org/wiki/Multiplexing" title="Multiplexing">multiplexing</a>
+</td></tr>
+<tr>
+<th rowspan="3">Media<br>layers
+</th>
+<td style="background:#eddc9c;">3
+</td>
+<td style="background:#eddc9c;"><a href="https://en.wikipedia.org/wiki/Network_layer" title="Network layer">Network</a>
+</td>
+<td style="background:#eddc9c;"><a href="https://en.wikipedia.org/wiki/Network_packet" title="Network packet">Packet</a>
+</td>
+<td style="background:#eddc9c;">Structuring and managing a multi-node network, including <a href="https://en.wikipedia.org/wiki/Address_space" title="Address space">addressing</a>, <a href="https://en.wikipedia.org/wiki/Routing" title="Routing">routing</a> and <a href="https://en.wikipedia.org/wiki/Network_traffic_control" title="Network traffic control">traffic control</a>
+</td></tr>
+<tr>
+<td style="background:#e9c189;">2
+</td>
+<td style="background:#e9c189;"><a href="https://en.wikipedia.org/wiki/Data_link_layer" title="Data link layer">Data link</a>
+</td>
+<td style="background:#e9c189;"><a href="https://en.wikipedia.org/wiki/Frame_(networking)" title="Frame (networking)">Frame</a>
+</td>
+<td style="background:#e9c189;">Reliable transmission of data frames between two nodes connected by a physical layer
+</td></tr>
+<tr>
+<td style="background:#e9988a;">1
+</td>
+<td style="background:#e9988a;"><a href="https://en.wikipedia.org/wiki/Physical_layer" title="Physical layer">Physical</a>
+</td>
+<td style="background:#e9988a;"><a href="https://en.wikipedia.org/wiki/Bit" title="Bit">Bit</a>, <a href="https://en.wikipedia.org/wiki/Symbol_rate#Symbols" title="Symbol rate">Symbol</a>
+</td>
+<td style="background:#e9988a;">Transmission and reception of raw bit streams over a physical medium
+</td></tr></tbody></table>
+<h4 id="layer-1-physical-layer">Layer 1: Physical Layer</h4>
+<p>This layer is responsible for the transmission and reception of raw data between a device and a physical transmission medium, such as cables and switches. It also converts the digital data into electrical, radio or optical signals to make it transferable via a physical medium.</p>
+<h4 id="layer-2-data-link-layer">Layer 2: Data Link Layer</h4>
+<p>The data link layer provides node-to-node data transfer. In this layer data is transferred between two devices on the SAME network. DLL takes packet from the network layer and breaks them into smaller pieces called frames. DLL detects and possibly corrects errors that may occur in the physical layer.</p>
+<h4 id="layer-3-network-layer">Layer 3: Network Layer</h4>
+<p>The network layer is responsible for transferring data packets between two different networks. It receives frames from the DL layer, and delivers them to their intended destinations based on the node's logical address, such as IP address. It also breaks segments from the transport layer into packers on the sending device and reassembles these packets on the receiving device. This layer is also responsible for finding the best physical path for the data to reach its destination, this is done by special nodes in the layer known as routers and this process is called routing.</p>
+<h4 id="layer-4-transport-layer">Layer 4: Transport Layer</h4>
+<p>The transport layer manages the delivery and error checking of data packages. It controls the size, sequencing and the transfer of data between systems and hosts. It also provides the acknowledgement of the successful data transmission and sends the next data if no error occurred. Although not developed under the OSI Model, the Transmission Control Protocol (TCP) and the User Datagram Protocol (UDP) are commonly categorized as layer-4 protocols within OSI. Transport Layer Security (TLS) provide security at this layer.</p>
+<h4 id="layer-5-session-layer">Layer 5: Session Layer</h4>
+<p>The session layer controls the connections between computers. It establishes, manages and terminates the connections between two computers. This layer ensures that the session stays open long enough to transfer all the data being exchanged, and then promptly closes the session in order to avoid wasting resources. This layer is also responsible for session checkpointing and recovery in case the systems get disconnected in the middle of a data transfer. Session layer also include authentication and reconnection.</p>
+<h4 id="layer-6-presentation-layer">Layer 6: Presentation Layer</h4>
+<p>The presentation layer prepares the data so that it can be used by the application layer. It formats, translates data for the application layer based on the syntax or semantics that the application accepts. Because of this, it is also called syntax layer. It can also handle encryption and decryption of data. It also compress the data received from the application layer before sending it to Session Layer.</p>
+<h4 id="layer-7-application-layer">Layer 7: Application Layer</h4>
+<p>This layer is closet to the end user and both the user and the application layer interact directly with the application. Just for clarification, the applications are not part of the application layer, rather this layer is responsible for the protocols and data manipulation that the software uses to present data to the user. Some of the protocols in Application layer are HTTP, FTP, SMPT, Telnet, DNS etc.</p>
+
+</body>
+</html>
