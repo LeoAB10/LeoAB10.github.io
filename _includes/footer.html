@@ -3,18 +3,17 @@
   <div class="social-links">
     {% for link in site.social-links %}
     <a href="{{ link.url | relative_url }}">
-      <img src="{{ link.icon | relative_url }}" width="24px" height="24px">
+      <img src="{{ link.icon | relative_url }}" width="24px" height="24px" />
     </a>
     {% endfor %}
   </div>
-  <div class="nav-links">
-    {% for link in site.nav-links %}
-      <a href="{{ link.url | relative_url }}">
-        <span style="font-size: small;">{{ link.title }}</span>
-      </a>
-      {% if link.url != site.me %}
-      <span style="font-size: small;">&middot;</span>
-      {% endif %}
-    {% endfor %}
+  <div class="footer-links">
+    <a href="{{ site.anon-form }}" target="_blank">
+      <span style="font-size: medium">Anonymous Form</span>
+    </a>
+    <span style="font-size: medium">&middot;</span>
+    <a href="{{ site.repo }}" target="_blank">
+      <span style="font-size: medium">GitHub Repository</span>
+    </a>
   </div>
 </footer>

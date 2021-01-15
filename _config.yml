@@ -4,6 +4,7 @@ baseurl:             ""
 url:                 ""
 me:                  /about/
 anon-form:           https://forms.gle/oj5BvZftnLP5qgBy5
+repo:                https://github.com/atin/atin.github.io
 # Navigation links
 nav-links:
   - title:           Home
