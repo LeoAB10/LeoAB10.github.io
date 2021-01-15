@@ -17,8 +17,13 @@
   {% if page.url and site.baseurl %}
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   {% endif %}
+  {% if page.custom_css %}
+    {% for stylesheet in page.custom_css %}
+      <link rel="stylesheet" href="{{ site.baseurl }}/css/{{ stylesheet }}.css">
+    {% endfor %}
+  {% endif %}
 
-  <link rel="stylesheet" href="{{ '/css/main.css' | absolute_url }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css"">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
   <!-- Font Awesome -->
