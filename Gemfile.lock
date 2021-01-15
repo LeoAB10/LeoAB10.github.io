@@ -21,7 +21,6 @@ GEM
     eventmachine (1.2.7-x86-mingw32)
     ffi (1.13.1)
     ffi (1.13.1-java)
-    ffi (1.13.1-x64-mingw32)
     ffi (1.13.1-x86-mingw32)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
@@ -129,7 +128,7 @@ GEM
     tzinfo-data (1.2020.4)
       tzinfo (>= 1.0.0)
     unicode-display_width (1.7.0)
-    wdm (0.1.1)
+    webrick (1.7.0)
     zeitwerk (2.4.2)
 
 PLATFORMS
@@ -148,7 +147,7 @@ DEPENDENCIES
   minima (~> 2.5)
   tzinfo (~> 1.2)
   tzinfo-data
-  wdm (~> 0.1.1)
+  webrick (~> 1.7)
 
 BUNDLED WITH
-   2.1.4
+   2.2.4
