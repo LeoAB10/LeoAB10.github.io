@@ -28,13 +28,13 @@ nav-links:
 # Social Links
 social-links:
   - url:             http://github.com/atin
-    icon:            /img/GitHub/PNG/GitHub-Mark-32px.png
+    icon:            /assets/img/GitHub/PNG/GitHub-Mark-32px.png
   - url:             http://linkedin.com/in/atin
-    icon:            /img/GitHub/PNG/GitHub-Mark-32px.png
+    icon:            /assets/img/GitHub/PNG/GitHub-Mark-32px.png
   - url:             https://stackoverflow.com/users/12011589/atin
-    icon:            /img/icons/stackoverflow.svg
+    icon:            /assets/img/icons/stackoverflow.svg
   - url:             https://www.kaggle.com/atin10
-    icon:            /img/icons/mathexchange.png
+    icon:            /assets/img/icons/mathexchange.png
 
 author:
   name:              Atin Bainada
@@ -43,8 +43,8 @@ author:
 
 # Custom vars
 avatar:
-  normal:            /img/avatar.png
-  with_mask:         /img/avatar_with_mask.png
+  normal:            /assets/img/avatar.png
+  with_mask:         /assets/img/avatar_with_mask.png
 version: 0.0.1
 
 plugins:
