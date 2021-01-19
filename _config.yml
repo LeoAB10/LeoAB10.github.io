@@ -46,6 +46,7 @@ avatar:
   normal:            /assets/img/avatar.png
   with_mask:         /assets/img/avatar_with_mask.png
 version: 0.0.1
+google_analytics_id: G-E3ZB3QDST6
 
 plugins:
   - jekyll-feed
