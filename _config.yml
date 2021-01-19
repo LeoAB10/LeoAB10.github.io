@@ -52,7 +52,7 @@ plugins:
   - jekyll-seo-tag
   - jemoji
 # Dependencies
-# markdown:            kramdown
+markdown:            kramdown
 # highlighter:         rogue
 # permalink:           pretty
 # paginate:            5

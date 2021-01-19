@@ -21,7 +21,7 @@ layout: post
 ### References
 
 - Algorithm Design – Jon Klienberg, Eva Tardos
-- <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/#book" target="_blank">Algorithms - Jeff Erikson</a>
+- [Algorithms - Jeff Erikson](http://jeffe.cs.illinois.edu/teaching/algorithms/#book){:target="_blank"}
 
 ## Course Outline
 
