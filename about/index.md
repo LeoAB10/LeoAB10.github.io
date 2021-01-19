@@ -4,7 +4,7 @@ title: Who am I?
 permalink: /about/
 ---
 
-**Namaste :pray:**, I'm Atin Bainada, a second year CS Undergrad student at IIT Bombay.
+Namaste :pray:, I'm Atin Bainada, a second year CS Undergrad student at IIT Bombay.
 
 You can reach me at:
 

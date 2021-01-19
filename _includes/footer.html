@@ -5,12 +5,8 @@
     <i class="fab fa-github fa-lg"></i>
     <i class="fab fa-kaggle fa-lg"></i>
     <i class="fab fa-linkedin fa-lg"></i>
-    {% for link in site.social-links %}
-    <a href="{{ link.url | relative_url }}">
-      <img src="{{ link.icon | relative_url }}" width="24px" height="24px" />
-    </a>
-    {% endfor %}
   </div>
+
   <div class="footer-links">
     <a href="{{ site.anon-form }}" target="_blank">
       <span style="font-size: medium">Anonymous Form</span>
