@@ -3,7 +3,7 @@ title: CS 224 - Computer Networks
 layout: post
 ---
 
-## A li'l Terminology
+## Terminology
 
 | Terms                           | Their meaning                                                |
 | ------------------------------- | :----------------------------------------------------------- |
