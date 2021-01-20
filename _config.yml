@@ -41,6 +41,8 @@ author:
   url:               atin.github.io
   email:             atinbainada@iitb.ac.in
 
+theme:               theme_1017
+
 # Custom vars
 avatar:
   normal:            /assets/img/avatar.png

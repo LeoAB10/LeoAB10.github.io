@@ -1,4 +1,0 @@
----
-layout: dev
-title: Blog
----
