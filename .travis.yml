@@ -1,0 +1,16 @@
+language: ruby
+cache: bundler
+branches:
+  only:
+  - dev
+script:
+  - JEKYLL_ENV=production bundle exec jekyll build --destination site
+deploy:
+  provider: pages
+  local-dir: ./site
+  target-branch: gh-pages
+  skip-cleanup: true
+  github-token: ${{ secrets.Jekyll_PAT }}
+  keep-history: true
+  on:
+    branch: dev
