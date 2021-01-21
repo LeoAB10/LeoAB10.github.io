@@ -10,7 +10,7 @@ deploy:
   local-dir: ./site
   target-branch: gh-pages
   skip-cleanup: true
-  github-token: ${{ secrets.Jekyll_PAT }}
+  github-token: ${{ secrets.JEKYLL_PAT }}
   keep-history: true
   on:
     branch: dev
