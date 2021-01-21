@@ -29,16 +29,16 @@ nav-links:
 social-links:
   - name:            github
     url:             http://github.com/atin
-    icon:            /assets/img/GitHub/PNG/GitHub-Mark-32px.png
-  - name:            linkedin
-    url:             http://linkedin.com/in/atin
-    icon:            /assets/img/GitHub/PNG/GitHub-Mark-32px.png
+    icon_path:       /assets/img/icons/github.svg
   - name:            stack-overflow
     url:             https://stackoverflow.com/users/12011589/atin
-    icon:            /assets/img/icons/stackoverflow.svg
+    icon_path:       /assets/img/icons/stackoverflow.svg
+  - name:            linkedin
+    url:             http://linkedin.com/in/atin
+    icon_path:       /assets/img/icons/linkedin.svg
   - name:            kaggle
     url:             https://www.kaggle.com/atin10
-    icon:            /assets/img/icons/mathexchange.png
+    icon_path:       /assets/img/icons/kaggle.svg
 
 author:
   name:              Atin Bainada
@@ -55,7 +55,7 @@ remote_theme:        atin/theme_1017
 avatar:
   normal:            /assets/img/avatar.png
   with_mask:         /assets/img/avatar_with_mask.png
-version: 0.0.1
+
 google_analytics_id: G-E3ZB3QDST6
 
 plugins:
