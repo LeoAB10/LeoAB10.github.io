@@ -27,19 +27,26 @@ nav-links:
 
 # Social Links
 social-links:
-  - url:             http://github.com/atin
+  - name:            github
+    url:             http://github.com/atin
     icon:            /assets/img/GitHub/PNG/GitHub-Mark-32px.png
-  - url:             http://linkedin.com/in/atin
+  - name:            linkedin
+    url:             http://linkedin.com/in/atin
     icon:            /assets/img/GitHub/PNG/GitHub-Mark-32px.png
-  - url:             https://stackoverflow.com/users/12011589/atin
+  - name:            stack-overflow
+    url:             https://stackoverflow.com/users/12011589/atin
     icon:            /assets/img/icons/stackoverflow.svg
-  - url:             https://www.kaggle.com/atin10
+  - name:            kaggle
+    url:             https://www.kaggle.com/atin10
     icon:            /assets/img/icons/mathexchange.png
 
 author:
   name:              Atin Bainada
   url:               atin.github.io
   email:             atinbainada@iitb.ac.in
+
+
+
 
 # theme:               theme_1017
 remote_theme:        atin/theme_1017
@@ -56,7 +63,7 @@ plugins:
   - jekyll-seo-tag
   - jemoji
   - jekyll-remote-theme
-# Dependencies
+
 markdown:            kramdown
 # highlighter:         rogue
 # permalink:           pretty
