@@ -48,8 +48,8 @@ author:
 
 
 
-# theme:               theme_1017
-remote_theme:        atin/theme_1017
+# theme:               jekyll_theme_1017
+remote_theme:        atin/jekyll_theme_1017
 
 # Custom vars
 avatar:
