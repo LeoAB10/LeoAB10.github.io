@@ -1,16 +1,24 @@
 language: ruby
+rvm:
+  - 3.0.0
 cache: bundler
+dist: focal
+
 branches:
   only:
-  - dev
-script:
-  - JEKYLL_ENV=production bundle exec jekyll build --destination site
+  - main
+
+before_script:
+ - chmod +x ./script/cibuild
+
+script: ./script/cibuild
+
 deploy:
   provider: pages
-  local-dir: ./site
+  local-dir: ./_site
   target-branch: gh-pages
   skip-cleanup: true
-  github-token: ${{ secrets.JEKYLL_PAT }}
+  github-token: $GITHUB_TOKEN
   keep-history: true
   on:
-    branch: dev
+    branch: main

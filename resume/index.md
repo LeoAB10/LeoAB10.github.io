@@ -8,4 +8,4 @@ Here are my resumes. They might be a little old, see below to check when were th
 - [One page resume](./1pg.pdf){:target="blank"}
 - [Two page resume](./2pg.pdf){:target="blank"}
 
-Last updated in August 2020
+Last updated in **Feb 2021**

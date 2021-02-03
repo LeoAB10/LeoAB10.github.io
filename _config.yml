@@ -5,6 +5,7 @@ url:                 ""
 me:                  /about/
 anon-form:           https://forms.gle/oj5BvZftnLP5qgBy5
 repo:                https://github.com/atin/atin.github.io
+
 # Navigation links
 nav-links:
   - title:           Home
@@ -22,8 +23,6 @@ nav-links:
       url:           /resume/2pg.pdf/
   - title:           About me
     url:             /about/
-
-
 
 # Social Links
 social-links:
@@ -45,8 +44,11 @@ author:
   url:               atin.github.io
   email:             atinbainada@iitb.ac.in
 
-
-
+markdown:            kramdown
+# highlighter:         rogue
+# permalink:           pretty
+# paginate:            5
+# paginate_path:       "/blog/page:num/"s
 
 theme:               jekyll_theme_1017
 # remote_theme:        atin/jekyll_theme_1017
@@ -58,14 +60,10 @@ avatar:
 
 google_analytics_id: G-E3ZB3QDST6
 
+exclude: [vendor]
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jemoji
   - jekyll-remote-theme
-
-markdown:            kramdown
-# highlighter:         rogue
-# permalink:           pretty
-# paginate:            5
-# paginate_path:       "/blog/page:num/"s
