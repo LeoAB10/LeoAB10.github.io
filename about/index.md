@@ -4,7 +4,14 @@ title: Who am I?
 permalink: /about/
 ---
 
-Namaste :pray:, I'm Atin Bainada, a second year CS Undergrad student at IIT Bombay.
+Namaste :pray:, I'm Atin Bainada, a second year UG student at [CSE, IIT Bombay](https://cse.iitb.ac.in).
+
+I've a deep interest in machine learning, specially Reinforcement Learning. I also enjoy looking at stars and studying astronomy and astrophysics. And I would like to work on something that includes both reinforcement learning and astronomy.
+
+I also like watching and playing football (both outside and FIFA :grin:).  
+I adore Lionel Messi, he is the greatest athlete of all time in my opinion.
+
+Go [here](https://youtu.be/dQw4w9WgXcQ) to know more about the things i like.
 
 You can reach me at:
 
